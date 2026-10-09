@@ -1,0 +1,14 @@
+{
+  "name": "apuracao-presidente-2026",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Apuração de presidente das Eleições 2026, com dados oficiais do TSE, para iframe do Louveira News.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  }
+}

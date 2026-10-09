@@ -1,0 +1,415 @@
+:root {
+  --papel: #f3efe6;
+  --tinta: #1b1914;
+  --mudo: #5e584e;
+  --fio: #ddd4c4;
+  --cartao: #fffdf8;
+  --verde: #0f6a45;
+  --verde-fundo: #e5f3ec;
+  --azul: #1d4e89;
+  --azul-fundo: #e7eef6;
+  --aviso: #8a3d12;
+  --aviso-fundo: #f8efe6;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--verde);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 4px 0 0;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.sub {
+  margin: 8px 0 0;
+  color: var(--mudo);
+  font-size: 0.95rem;
+}
+
+.selos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.selo {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--verde-fundo);
+  color: var(--verde);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.selo.andamento {
+  background: #fff4d8;
+  color: #7a4b00;
+}
+
+.faixa,
+.nota,
+.aviso,
+.cartao,
+.totais,
+.demais,
+.rodape,
+.espera {
+  margin-top: 14px;
+}
+
+.faixa,
+.nota,
+.aviso,
+.cartao,
+.totais,
+.demais,
+.espera {
+  background: var(--cartao);
+  border: 1px solid var(--fio);
+  border-radius: 16px;
+}
+
+.faixa {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-top: 4px solid var(--verde);
+}
+
+.faixa strong {
+  font-size: 1.35rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.faixa p,
+.nota,
+.aviso,
+.rodape,
+.complemento {
+  margin: 0;
+}
+
+.faixa p,
+.meta,
+.rodape,
+.partido,
+.situacao,
+.total small {
+  color: var(--mudo);
+}
+
+.nota,
+.aviso {
+  padding: 12px 14px;
+  font-size: 0.92rem;
+}
+
+.aviso {
+  background: var(--aviso-fundo);
+  border-color: #efd7c4;
+  color: var(--aviso);
+}
+
+.grade {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.cartao {
+  margin-top: 0;
+  padding: 16px;
+}
+
+.cartao.lider {
+  border-top: 4px solid var(--verde);
+}
+
+.cartao.segundo {
+  border-top: 4px solid var(--azul);
+}
+
+.cabeca {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.foto,
+.monograma {
+  width: 76px;
+  height: 76px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #efe8da;
+}
+
+.monograma {
+  display: grid;
+  place-items: center;
+  color: var(--verde);
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 1.8rem;
+}
+
+.numero {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nome {
+  margin: 2px 0 0;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.partido {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+}
+
+.votos {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.votos strong {
+  font-size: 1.55rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+.percentual {
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.cartao.lider .percentual {
+  color: var(--verde);
+}
+
+.cartao.segundo .percentual {
+  color: var(--azul);
+}
+
+.barra {
+  height: 10px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ebe4d6;
+}
+
+.barra span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--verde);
+}
+
+.cartao.segundo .barra span {
+  background: var(--azul);
+}
+
+.situacao {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.totais {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  overflow: hidden;
+  padding: 0;
+  background: var(--fio);
+}
+
+.total {
+  padding: 12px 14px;
+  background: var(--cartao);
+}
+
+.total span,
+.total strong,
+.total small {
+  display: block;
+}
+
+.total span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.total strong {
+  margin-top: 4px;
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.total small {
+  margin-top: 2px;
+  font-size: 0.85rem;
+}
+
+.demais {
+  padding: 0;
+}
+
+.demais summary {
+  padding: 14px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.demais summary:focus-visible,
+.rodape a:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 2px;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: baseline;
+  padding: 10px 16px;
+  border-top: 1px solid var(--fio);
+}
+
+.linha .num {
+  grid-row: 1 / span 2;
+}
+
+.linha .quem,
+.linha .placar {
+  margin: 0;
+}
+
+.linha .quem b {
+  font-weight: 700;
+}
+
+.linha .num,
+.linha .placar {
+  font-variant-numeric: tabular-nums;
+}
+
+.linha .num {
+  color: var(--mudo);
+  font-size: 0.85rem;
+}
+
+.linha .placar {
+  color: var(--mudo);
+  font-weight: 600;
+}
+
+.espera {
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.hora-grande {
+  margin: 0;
+  color: var(--verde);
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 4rem;
+  line-height: 0.9;
+}
+
+.mensagem {
+  margin: 16px 0 0;
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 1.7rem;
+  line-height: 1.15;
+}
+
+.complemento {
+  margin-top: 12px;
+  color: var(--mudo);
+}
+
+.rodape {
+  font-size: 0.85rem;
+}
+
+.rodape a {
+  color: var(--azul);
+}
+
+.carregando,
+.falha {
+  margin: 0;
+  padding: 28px 8px;
+  font-size: 1.05rem;
+}
+
+@media (min-width: 640px) {
+  main {
+    padding-top: 28px;
+  }
+
+  .grade {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .totais {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

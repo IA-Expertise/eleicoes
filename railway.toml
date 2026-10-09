@@ -1,0 +1,13 @@
+# Lido no deploy. sleepApplication = false desliga o modo Serverless
+# (o antigo app-sleeping). No dia da apuração o processo precisa continuar
+# consultando o TSE mesmo sem leitores no iframe.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "ALWAYS"
+restartPolicyMaxRetries = 10
+sleepApplication = false
