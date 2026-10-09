@@ -21,7 +21,7 @@ O navegador do leitor só fala com este serviço. Quem busca o JSON do TSE é o 
 
 | Variável | Obrigatória | Função |
 | --- | --- | --- |
-| `FRAME_ANCESTORS` | não | Origens que podem embutir a página, separadas por espaço ou vírgula. Entram em `Content-Security-Policy: frame-ancestors`. Padrão: `https://louveiranews.com.br https://www.louveiranews.com.br https://louveira.com.br https://www.louveira.com.br` |
+| `FRAME_ANCESTORS` | não | Origens que podem embutir a página, separadas por espaço ou vírgula. Entram em `Content-Security-Policy: frame-ancestors`. Padrão: `https://louveiranews.com.br https://www.louveiranews.com.br` |
 | `PORT` | não | Porta HTTP. O Railway define sozinho. Localmente o padrão é `3000`. |
 
 Exemplo:

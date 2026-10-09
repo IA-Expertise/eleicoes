@@ -1,4 +1,4 @@
-const PADRAO = "https://louveiranews.com.br https://www.louveiranews.com.br https://louveira.com.br https://www.louveira.com.br";
+const PADRAO = "https://louveiranews.com.br https://www.louveiranews.com.br";
 
 export function origensPermitidas(bruto) {
   const texto = (bruto ?? "").trim() || PADRAO;
