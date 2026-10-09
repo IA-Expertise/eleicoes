@@ -128,7 +128,7 @@ test("frame-ancestors sai da variável de ambiente", () => {
     origensPermitidas("https://louveira.com.br, https://www.louveira.com.br"),
     "https://louveira.com.br https://www.louveira.com.br",
   );
-  assert.match(montarCsp(origensPermitidas("")), /frame-ancestors https:\/\/louveira\.com\.br/);
+  assert.match(montarCsp(origensPermitidas("")), /frame-ancestors https:\/\/louveiranews\.com\.br/);
   assert.throws(() => origensPermitidas("http://inseguro.example"), /inválida/);
 });
 
@@ -157,7 +157,7 @@ test("a página e o endpoint respondem no mesmo processo", async () => {
     assert.equal(api.status, 200);
     assert.equal(corpo.modo, "primeiro");
     assert.equal(corpo.apuracao.candidatos[0].pvap, "47,03");
-    assert.match(api.headers.get("content-security-policy"), /frame-ancestors https:\/\/louveira\.com\.br/);
+    assert.match(api.headers.get("content-security-policy"), /frame-ancestors https:\/\/louveiranews\.com\.br/);
     assert.equal(api.headers.get("x-frame-options"), null);
 
     const pagina = await fetch(`http://127.0.0.1:${porta}/`);

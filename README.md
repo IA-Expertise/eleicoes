@@ -1,6 +1,6 @@
 # Apuração de presidente — Eleições 2026
 
-Página única para o iframe do [Louveira News](https://louveira.com.br). Mostra só o cargo de presidente, no Brasil. Os números vêm dos JSON oficiais do TSE, sem recálculo. Não há banco: a página e o endpoint rodam no mesmo processo.
+Página única para o iframe do [Louveira News](https://louveiranews.com.br). Mostra só o cargo de presidente, no Brasil. Os números vêm dos JSON oficiais do TSE, sem recálculo. Não há banco: a página e o endpoint rodam no mesmo processo.
 
 ## Iframe
 
@@ -21,13 +21,13 @@ O navegador do leitor só fala com este serviço. Quem busca o JSON do TSE é o 
 
 | Variável | Obrigatória | Função |
 | --- | --- | --- |
-| `FRAME_ANCESTORS` | não | Origens que podem embutir a página, separadas por espaço ou vírgula. Entram em `Content-Security-Policy: frame-ancestors`. Padrão: `https://louveira.com.br https://www.louveira.com.br` |
+| `FRAME_ANCESTORS` | não | Origens que podem embutir a página, separadas por espaço ou vírgula. Entram em `Content-Security-Policy: frame-ancestors`. Padrão: `https://louveiranews.com.br https://www.louveiranews.com.br https://louveira.com.br https://www.louveira.com.br` |
 | `PORT` | não | Porta HTTP. O Railway define sozinho. Localmente o padrão é `3000`. |
 
 Exemplo:
 
 ```bash
-railway variable set FRAME_ANCESTORS="https://louveira.com.br https://www.louveira.com.br"
+railway variable set FRAME_ANCESTORS="https://louveiranews.com.br https://www.louveiranews.com.br"
 ```
 
 Se o blog for servido de outra origem, inclua essa origem também. Só `https://`.
